@@ -1,0 +1,10 @@
+<div class="container">
+    <a routerLink="/register">Register</a>
+	<div class="product-container">
+		<div *ngFor="let product of products" class="product">
+            <img [src]="product.image" style="width: 80%;" />
+            <h2>{{ product.title }}</h2>
+			<h3>{{ product.description }}</h3>
+        </div>
+	</div>
+</div>

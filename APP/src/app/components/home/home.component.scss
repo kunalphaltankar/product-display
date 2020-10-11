@@ -1,0 +1,18 @@
+.container{
+    padding: 100px;
+}
+
+.product-container{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.product{
+    border: 1px solid;
+    box-sizing: border-box;
+    width: 33.33%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
