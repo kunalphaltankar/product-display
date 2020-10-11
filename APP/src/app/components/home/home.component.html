@@ -1,10 +1,15 @@
 <div class="container">
-    <a routerLink="/register">Register</a>
+    <a routerLink="/register" style="align-self: flex-end;">Register</a>
+    
 	<div class="product-container">
-		<div *ngFor="let product of products" class="product">
-            <img [src]="product.image" style="width: 80%;" />
-            <h2>{{ product.title }}</h2>
-			<h3>{{ product.description }}</h3>
-        </div>
-	</div>
+		<div *ngFor="let product of queuedProducts" class="product">
+			<div class="image-container">
+				<img [src]="baseurl + product.image" class="image" />
+			</div>
+			<p class="title text">{{ product.title }}</p>
+			<p class="text">{{ product.description }}</p>
+		</div>
+    </div>
+
+    <a style="cursor: pointer;align-self: flex-end;" (click)="showOrHide()">Queque[{{this.allProducts.length}}]</a>
 </div>
